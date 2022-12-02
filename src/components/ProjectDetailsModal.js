@@ -9,6 +9,8 @@ class ProjectDetailsModal extends Component {
     const title = ["Podlover" ]
     const description = [  "This was a group project, our team created an app where every podcast lover can search for their favorite podcast ir creator. "]
     const url = ["https://podlovers-app.herokuapp.com/"];
+    const githuburlfrontend = ["https://github.com/ruraliz/pod-lovers-frontend"];
+    const githuburlbackend = ["https://github.com/ruraliz/pod-lovers-backend"]  
 
     return (
 
@@ -55,6 +57,8 @@ class ProjectDetailsModal extends Component {
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
+             <h4>Github Link Front-End{githuburlfrontend}</h4>
+             <h4>Github Link Back-End{githuburlbackend}</h4>
               {url ? (
                 <a
                   href={url}

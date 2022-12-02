@@ -8,6 +8,7 @@ class ProjectDetailsModalTwo extends Component {
     const title = ["Guess The Country game"];
     const description = ["This is a game in which the player has 10 seconds to guess the name of the country within 4 choices based on the flag that appears on the screen"]
     const url = ["https://ruraliz.github.io/Guess-the-country-game/"];
+    const githuburl = ["https://github.com/ruraliz/Guess-the-country-game"] 
 
     return (
       <Modal
@@ -53,6 +54,7 @@ class ProjectDetailsModalTwo extends Component {
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
+              <h4>Github Link{githuburl}</h4>
               {url ? (
                 <a
                   href={url}

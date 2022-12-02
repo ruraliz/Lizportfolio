@@ -8,6 +8,7 @@ class ProjectDetailsModalThree extends Component {
     const title = ["Chef It Up"];
     const description = [ "Created recipe search app to facilitate ease of searching for recipes based on keywords."]
     const url = ["https://chef-it-up-1.herokuapp.com"];
+    const githuburl = ["https://github.com/ruraliz/Project2_Chef_It_Up"] 
 
     return (
       <Modal
@@ -53,6 +54,7 @@ class ProjectDetailsModalThree extends Component {
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
+              <h4>Github Link{githuburl}</h4>
               {url ? (
                 <a
                   href={url}
