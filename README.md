@@ -1,5 +1,2 @@
-
-
-<img align="left" src="./../images/portfolio.gif" height="50" alt="react icon"/>
-<h2>Click to view portfolio</h2>
-
+<img src="/Users/lizrurangwa/Desktop/general-assembly/projects/react-frontend-dev-portfolio/src/images/portfolio.gif" height="50" alt="react icon"/>
+<h4>Click to view portfolio</h4>
