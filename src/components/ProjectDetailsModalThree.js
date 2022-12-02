@@ -54,7 +54,6 @@ class ProjectDetailsModalThree extends Component {
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
               {title}
-              <h4>Github Link{githuburl}</h4>
               {url ? (
                 <a
                   href={url}
@@ -69,6 +68,21 @@ class ProjectDetailsModalThree extends Component {
                 </a>
               ) : null}
             </h3>
+            <h4>Github link
+            {githuburl ? (
+                <a
+                  href={githuburl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-href"
+                >
+                  <i
+                    className="fas fa-external-link-alt"
+                    style={{ marginLeft: "10px" }}
+                  ></i>
+                </a>
+              ) : null}
+            </h4>
             <p className="modal-description">{description}</p>
             <div className="col-md-12 text-center">
               
