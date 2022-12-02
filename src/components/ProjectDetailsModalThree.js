@@ -4,10 +4,10 @@ import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 
 class ProjectDetailsModalThree extends Component {
   render() {
-    const tennisTechnolgies =["CSS","Javascript", "EJS", "postgreSQL", "Bootstrap"];
-    const tennisTitle = ["Chef It Up"];
-    const tennisDescription = [ "Created recipe search app to facilitate ease of searching for recipes based on keywords."]
-    const tennisurl = ["https://chef-it-up-1.herokuapp.com"];
+    const technolgies =["CSS","Javascript", "EJS", "postgreSQL", "Bootstrap"];
+    const title = ["Chef It Up"];
+    const description = [ "Created recipe search app to facilitate ease of searching for recipes based on keywords."]
+    const url = ["https://chef-it-up-1.herokuapp.com"];
 
     return (
       <Modal
@@ -52,10 +52,10 @@ class ProjectDetailsModalThree extends Component {
           </div>
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
-              {tennisTitle}
-              {tennisurl ? (
+              {title}
+              {url ? (
                 <a
-                  href={tennisurl}
+                  href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-href"
@@ -67,7 +67,7 @@ class ProjectDetailsModalThree extends Component {
                 </a>
               ) : null}
             </h3>
-            <p className="modal-description">{tennisDescription}</p>
+            <p className="modal-description">{description}</p>
             <div className="col-md-12 text-center">
               
             </div>
@@ -79,30 +79,37 @@ class ProjectDetailsModalThree extends Component {
             <div className="container">
               <div className="row text-center">
                 <div className="col">
-                  <i className="devicon-mongodb-plain" style={{ position:"relative", fontSize: "300%" }}>
+                  <i className="devicon-css3-plain" style={{ position:"relative", fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "35%" }}>
-                      {tennisTechnolgies[0]}
+                      {technolgies[0]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
-                  <i className="devicon-express-original" style={{ fontSize: "300%" }}>
+                  <i className="devicon-javascript-plain" style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "35%" }}>
-                      {tennisTechnolgies[1]}
+                      {technolgies[1]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
-                  <i className="devicon-react-plain" style={{ fontSize: "300%" }}>
+                  <i className="devicon-ejs-plain" style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "35%" }}>
-                      {tennisTechnolgies[2]}
+                      {technolgies[2]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
-                  <i className="devicon-nodejs-plain" style={{ fontSize: "300%" }}>
+                  <i className="devicon-postgresql-plain" style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "35%" }}>
-                      {tennisTechnolgies[3]}
+                      {technolgies[3]}
+                    </p>
+                  </i>
+                </div>
+                <div className="col">
+                  <i className="devicon-bootstrap-plain" style={{ fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "35%" }}>
+                      {technolgies[4]}
                     </p>
                   </i>
                 </div>

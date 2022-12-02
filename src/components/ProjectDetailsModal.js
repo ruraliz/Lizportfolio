@@ -81,7 +81,7 @@ class ProjectDetailsModal extends Component {
             <div className="container">
               <div className="row text-center">
                 <div className="col">
-                  <i className="devicon-nodejs-plain" style={{ position:"relative", fontSize: "300%" }}>
+                  <i className="devicon-react-plain" style={{ position:"relative", fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "30%" }}>
                       {technologies[0]}
                     </p>
@@ -95,9 +95,16 @@ class ProjectDetailsModal extends Component {
                   </i>
                 </div>
                 <div className="col">
-                  <i className="devicon-postgresql-plain" style={{ fontSize: "300%" }}>
+                  <i className="devicon-mongodb-plain" style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "30%" }}>
                       {technologies[2]}
+                    </p>
+                  </i>
+                </div>
+                <div className="col">
+                  <i className="devicon-graphql-plain" style={{ fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "30%" }}>
+                      {technologies[3]}
                     </p>
                   </i>
                 </div>

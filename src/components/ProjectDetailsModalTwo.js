@@ -4,10 +4,10 @@ import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 
 class ProjectDetailsModalTwo extends Component {
   render() {
-    const tennisTechnolgies =["HTML 5", "CSS 3", "JavaScript"];
-    const tennisTitle = ["Guess The Country game"];
-    const tennisDescription = ["This is a game in which the player has 10 seconds to guess the name of the country within 4 choices based on the flag that appears on the screen"]
-    const tennisurl = ["https://ruraliz.github.io/Guess-the-country-game/"];
+    const technolgies =["HTML 5", "CSS 3", "JavaScript"];
+    const title = ["Guess The Country game"];
+    const description = ["This is a game in which the player has 10 seconds to guess the name of the country within 4 choices based on the flag that appears on the screen"]
+    const url = ["https://ruraliz.github.io/Guess-the-country-game/"];
 
     return (
       <Modal
@@ -52,10 +52,10 @@ class ProjectDetailsModalTwo extends Component {
           </div>
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
-              {tennisTitle}
-              {tennisurl ? (
+              {title}
+              {url ? (
                 <a
-                  href={tennisurl}
+                  href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-href"
@@ -67,9 +67,9 @@ class ProjectDetailsModalTwo extends Component {
                 </a>
               ) : null}
             </h3>
-            <p className="modal-description">{tennisDescription}</p>
+            <p className="modal-description">{description}</p>
             <div className="col-md-12 text-center">
-              <ul className="list-inline mx-auto">{this.tennisTechnolgies}</ul>
+              <ul className="list-inline mx-auto">{this.technolgies}</ul>
             </div>
           </div>
         </div>
@@ -81,21 +81,21 @@ class ProjectDetailsModalTwo extends Component {
                 <div className="col">
                   <i className="devicon-html5-plain" style={{ position:"relative", fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "30%" }}>
-                      {tennisTechnolgies[0]}
+                      {technolgies[0]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
                   <i className="devicon-css3-plain" style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "30%" }}>
-                      {tennisTechnolgies[1]}
+                      {technolgies[1]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
                   <i className="devicon-javascript-plain" style={{ fontSize: "300%" }}>
                     <p className="text-center" style={{ fontSize: "30%" }}>
-                      {tennisTechnolgies[2]}
+                      {technolgies[2]}
                     </p>
                   </i>
                 </div>
