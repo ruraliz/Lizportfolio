@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
+import ProjectDetailsModalTwo from "./ProjectDetailsModalTwo";
+import ProjectDetailsModalThree from "./ProjectDetailsModalThree";
 
 class Projects extends Component {
   constructor(props) {
@@ -7,6 +9,8 @@ class Projects extends Component {
     this.state = {
       deps: {},
       detailsModalShow: false,
+      detailsModalShowTwo: false,
+      detailsModalShowThree: false,
     };
   }
 
@@ -15,54 +19,162 @@ class Projects extends Component {
       this.setState({ detailsModalShow: true, deps: data });
     };
 
+    let detailsModalShowTwo = (data) => {
+      this.setState({ detailsModalShowTwo: true, deps: data });
+    };
+
+    let detailsModalShowThree = (data) => {
+      this.setState({ detailsModalShowThree: true, deps: data });
+    };
+
     let detailsModalClose = () => this.setState({ detailsModalShow: false });
-    if (this.props.resumeProjects && this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.projects;
-      var projects = this.props.resumeProjects.map(function (projects) {
-        return (
-          <div
-            className="col-sm-12 col-md-6 col-lg-4"
-            key={projects.title}
-            style={{ cursor: "pointer" }}
-          >
+    let detailsModalCloseTwo = () =>
+      this.setState({ detailsModalShowTwo: false });
+    let detailsModalCloseThree = () =>
+      this.setState({ detailsModalShowThree: false });
+
+    const sectionName = "Main Projects";
+    const projectTitle = [
+      "Guess The Country game",
+      "Podlover",
+      "Chef It Up",
+    ];
+    const projectDate = ["2022"];
+
+    return (
+      <>
+        <div
+          className="col-sm-12 col-md-6 col-lg-4"
+          style={{ cursor: "pointer" }}
+        ></div>
+        <section id="portfolio">
+          <div className="">
+            <h1 className="section-title" style={{ color: "black" }}>
+              <span>{sectionName}</span>
+            </h1>
+            <div className="col-md-12 mx-auto">
+              <div className="row mx-auto">{}</div>
+            </div>
             <span className="portfolio-item d-block">
-              <div className="foto" onClick={() => detailsModalShow(projects)}>
-                <div>
-                  <img
-                    src={projects.images[0]}
-                    alt="projectImages"
-                    height="230"
-                    style={{marginBottom: 0, paddingBottom: 0, position: 'relative'}}
-                  />
-                  <span className="project-date">{projects.startDate}</span>
-                  <br />
-                  <p className="project-title-settings mt-3">
-                    {projects.title}
-                  </p>
+              <div className="cotainer">
+                <div className="row text-center">
+                  <div className="col">
+                    <div
+                      className="foto"
+                      onClick={() => detailsModalShowThree()}
+                    >
+                      <div>
+                        <img
+                          src={require("./../images/home.gif")}
+                          alt="projectImages"
+                          height="255"
+                          style={{
+                            marginBottom: 0,
+                            paddingBottom: 0,
+                            position: "relative",
+                          }}
+                        />
+                        <br />
+                        <span
+                          className="project-date"
+                          style={{ color: "black" }}
+                        >
+                          {projectDate}
+                        </span>
+                        <br />
+                        <p className="project-title-settings mt-3">
+                          {projectTitle[2]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="container">
+                <div className="row text-center">
+                  <div className="col">
+                    <div className="foto" onClick={() => detailsModalShow()}>
+                      <div>
+                        <img
+                          src={require("./../images/podlover.gif")}
+                          alt="projectImages"
+                          height="200"
+                          style={{
+                            marginBottom: 0,
+                            paddingBottom: 0,
+                            position: "relative",
+                          }}
+                        />
+                        <br />
+                        <span
+                          style={{ color: "black" }}
+                          className="project-date"
+                        >
+                          {projectDate}
+                        </span>
+                        <br />
+                        <p className="project-title-settings mt-3">
+                          {projectTitle[1]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="container">
+                <div className="row text-center">
+                  <div className="col">
+                    <div className="foto" onClick={() => detailsModalShowTwo()}>
+                      <div>
+                        <img
+                          src={require("./../images/project1.gif")}
+                          alt="projectImages"
+                          height="255"
+                          style={{
+                            marginBottom: 0,
+                            paddingBottom: 0,
+                            position: "relative",
+                          }}
+                        />
+                        <br />
+                        <span
+                          className="project-date"
+                          style={{ color: "black" }}
+                        >
+                          {projectDate}
+                        </span>
+                        <br />
+                        <p className="project-title-settings mt-3">
+                          {projectTitle[0]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </span>
-          </div>
-        );
-      });
-    }
+            <ProjectDetailsModal
+              show={this.state.detailsModalShow}
+              onHide={detailsModalClose}
+              data={this.state.deps}
+            />
 
-    return (
-      <section id="portfolio">
-        <div className="col-md-12">
-          <h1 className="section-title" style={{ color: "black" }}>
-            <span>{sectionName}</span>
-          </h1>
-          <div className="col-md-12 mx-auto">
-            <div className="row mx-auto">{projects}</div>
+            <ProjectDetailsModalTwo
+              show={this.state.detailsModalShowTwo}
+              onHide={detailsModalCloseTwo}
+              data={this.state.deps}
+            />
+
+            <ProjectDetailsModalThree
+              show={this.state.detailsModalShowThree}
+              onHide={detailsModalCloseThree}
+              data={this.state.deps}
+            />
           </div>
-          <ProjectDetailsModal
-            show={this.state.detailsModalShow}
-            onHide={detailsModalClose}
-            data={this.state.deps}
-          />
-        </div>
-      </section>
+        </section>
+      </>
     );
   }
 }

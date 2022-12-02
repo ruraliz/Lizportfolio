@@ -2,16 +2,14 @@ import React, { Component } from "react";
 import { Modal } from "react-bootstrap";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 
-
-class ProjectDetailsModal extends Component {
+class ProjectDetailsModalThree extends Component {
   render() {
-    const technologies = ["React", "Bootstrap", "MongoDB", "GraphQL"];
-    const title = ["Podlover" ]
-    const description = [  "This was a group project, our team created an app where every podcast lover can search for their favorite podcast ir creator. "]
-    const url = ["https://podlovers-app.herokuapp.com/"];
+    const tennisTechnolgies =["CSS","Javascript", "EJS", "postgreSQL", "Bootstrap"];
+    const tennisTitle = ["Chef It Up"];
+    const tennisDescription = [ "Created recipe search app to facilitate ease of searching for recipes based on keywords."]
+    const tennisurl = ["https://chef-it-up-1.herokuapp.com"];
 
     return (
-
       <Modal
         {...this.props}
         size="lg"
@@ -47,17 +45,17 @@ class ProjectDetailsModal extends Component {
             </div>
             <img
                 className="img-thumbnail"
-                src= { require('./../images/podlover.gif')}
+                src= { require('./../images/home.gif')}
                 alt="projectImages"
-                height="303"
+                height="377"
                 style={{ marginBottom: 0, paddingBottom: 0, position: 'relative' }} />
           </div>
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
-              {title}
-              {url ? (
+              {tennisTitle}
+              {tennisurl ? (
                 <a
-                  href={url}
+                  href={tennisurl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-href"
@@ -69,9 +67,9 @@ class ProjectDetailsModal extends Component {
                 </a>
               ) : null}
             </h3>
-            <p className="modal-description">{description}</p>
+            <p className="modal-description">{tennisDescription}</p>
             <div className="col-md-12 text-center">
-              <ul className="list-inline mx-auto">{this.technologies}</ul>
+              
             </div>
           </div>
         </div>
@@ -81,23 +79,30 @@ class ProjectDetailsModal extends Component {
             <div className="container">
               <div className="row text-center">
                 <div className="col">
-                  <i className="devicon-nodejs-plain" style={{ position:"relative", fontSize: "300%" }}>
-                    <p className="text-center" style={{ fontSize: "30%" }}>
-                      {technologies[0]}
+                  <i className="devicon-mongodb-plain" style={{ position:"relative", fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "35%" }}>
+                      {tennisTechnolgies[0]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
-                  <i className="devicon-bootstrap-plain" style={{ fontSize: "300%" }}>
-                    <p className="text-center" style={{ fontSize: "30%" }}>
-                      {technologies[1]}
+                  <i className="devicon-express-original" style={{ fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "35%" }}>
+                      {tennisTechnolgies[1]}
                     </p>
                   </i>
                 </div>
                 <div className="col">
-                  <i className="devicon-postgresql-plain" style={{ fontSize: "300%" }}>
-                    <p className="text-center" style={{ fontSize: "30%" }}>
-                      {technologies[2]}
+                  <i className="devicon-react-plain" style={{ fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "35%" }}>
+                      {tennisTechnolgies[2]}
+                    </p>
+                  </i>
+                </div>
+                <div className="col">
+                  <i className="devicon-nodejs-plain" style={{ fontSize: "300%" }}>
+                    <p className="text-center" style={{ fontSize: "35%" }}>
+                      {tennisTechnolgies[3]}
                     </p>
                   </i>
                 </div>
@@ -112,4 +117,4 @@ class ProjectDetailsModal extends Component {
   }
 }
 
-export default ProjectDetailsModal;
+export default ProjectDetailsModalThree;

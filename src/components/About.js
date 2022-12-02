@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
-import angularIcon from "@iconify/icons-logos/angular-icon";
+import htmlIcon from "@iconify/icons-logos/html-5";
 import reactIcon from "@iconify/icons-logos/react";
-import vueIcon from "@iconify/icons-logos/vue";
+import javascriptIcon from "@iconify/icons-logos/javascript";
 
 class About extends Component {
-  render() {
-    if (this.props.sharedBasicInfo) {
-      var profilepic = "images/" + this.props.sharedBasicInfo.image;
-    }
-    if (this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.about;
-      var hello = this.props.resumeBasicInfo.description_header;
-      var about = this.props.resumeBasicInfo.description;
-    }
+    render() {
+      const sectionName = ["About Me"];
+      const hello = ["Hello to Everyone!"];
+      const about = [
+        "I aspire to create projects that showcase creativity and allow the users to have easier access to everyday needs or activities.",
+        "My ultimate goal is to be apart of a team that share these same value. A team that prioritize a growth mindset and promotes innovation." 
+      ];
 
     return (
       <section id="about">
@@ -26,12 +24,12 @@ class About extends Component {
               <div className="polaroid">
                 <span style={{ cursor: "auto" }}>
                   <img
-                    height="250px"
-                    src={profilepic}
+                    height="200px"
+                    src={require("./../images/myProfile.jpg")}
                     alt="Avatar placeholder"
                   />
                   <Icon
-                    icon={angularIcon}
+                    icon={htmlIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                   <Icon
@@ -39,7 +37,7 @@ class About extends Component {
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                   <Icon
-                    icon={vueIcon}
+                    icon={javascriptIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                 </span>
@@ -77,10 +75,10 @@ class About extends Component {
                     }}
                   >
                     <br />
-                    <span className="wave">{hello} :) </span>
+                    <span className="wave">{hello}</span>
                     <br />
                     <br />
-                    {about}
+                    <span className="h5">{about}</span>
                   </div>
                 </div>
               </div>
