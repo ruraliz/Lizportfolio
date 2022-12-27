@@ -186,7 +186,7 @@ class Projects extends Component {
                         </span>
                         <br />
                         <p className="project-title-settings mt-3">
-                          {projectTitle[0]}
+                          {projectTitle[3]}
                         </p>
                       </div>
                     </div>
