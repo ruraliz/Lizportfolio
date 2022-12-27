@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProjectDetailsModal from "./ProjectDetailsModal";
 import ProjectDetailsModalTwo from "./ProjectDetailsModalTwo";
 import ProjectDetailsModalThree from "./ProjectDetailsModalThree";
+import ProjectDetailsModalFour from "./ProjectDetailsModalFour";
 
 class Projects extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Projects extends Component {
       detailsModalShow: false,
       detailsModalShowTwo: false,
       detailsModalShowThree: false,
+      detailsModalShowFour:false,
     };
   }
 
@@ -26,18 +28,24 @@ class Projects extends Component {
     let detailsModalShowThree = (data) => {
       this.setState({ detailsModalShowThree: true, deps: data });
     };
+    let detailsModalShowFour = (data) => {
+      this.setState({ detailsModalShowFour: true, deps: data });
+    };
 
     let detailsModalClose = () => this.setState({ detailsModalShow: false });
     let detailsModalCloseTwo = () =>
       this.setState({ detailsModalShowTwo: false });
     let detailsModalCloseThree = () =>
       this.setState({ detailsModalShowThree: false });
+      let detailsModalCloseFour = () =>
+      this.setState({ detailsModalShowFour: false });
 
     const sectionName = "Main Projects";
     const projectTitle = [
       "Guess The Country game",
       "Podlover",
       "Chef It Up",
+      "Biba Fund"
     ];
     const projectDate = ["2022"];
 
@@ -154,6 +162,37 @@ class Projects extends Component {
                   </div>
                 </div>
               </div>
+              <div className="container">
+                <div className="row text-center">
+                  <div className="col">
+                    <div className="foto" onClick={() => detailsModalShowFour()}>
+                      <div>
+                        <img
+                          src={require("./../images/biba.gif")}
+                          alt="projectImages"
+                          height="255"
+                          style={{
+                            marginBottom: 0,
+                            paddingBottom: 0,
+                            position: "relative",
+                          }}
+                        />
+                        <br />
+                        <span
+                          className="project-date"
+                          style={{ color: "black" }}
+                        >
+                          {projectDate}
+                        </span>
+                        <br />
+                        <p className="project-title-settings mt-3">
+                          {projectTitle[0]}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </span>
             <ProjectDetailsModal
               show={this.state.detailsModalShow}
@@ -170,6 +209,12 @@ class Projects extends Component {
             <ProjectDetailsModalThree
               show={this.state.detailsModalShowThree}
               onHide={detailsModalCloseThree}
+              data={this.state.deps}
+            />
+
+            <ProjectDetailsModalFour
+              show={this.state.detailsModalShowFour}
+              onHide={detailsModalCloseFour}
               data={this.state.deps}
             />
           </div>
