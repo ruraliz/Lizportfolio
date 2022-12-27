@@ -75,7 +75,7 @@ class Projects extends Component {
                         <img
                           src={require("./../images/home.gif")}
                           alt="projectImages"
-                          height="255"
+                          height="200"
                           style={{
                             marginBottom: 0,
                             paddingBottom: 0,
@@ -139,7 +139,7 @@ class Projects extends Component {
                         <img
                           src={require("./../images/project1.gif")}
                           alt="projectImages"
-                          height="255"
+                          height="200"
                           style={{
                             marginBottom: 0,
                             paddingBottom: 0,
@@ -170,7 +170,7 @@ class Projects extends Component {
                         <img
                           src={require("./../images/biba.gif")}
                           alt="projectImages"
-                          height="255"
+                          height="190"
                           style={{
                             marginBottom: 0,
                             paddingBottom: 0,
