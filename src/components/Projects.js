@@ -45,7 +45,7 @@ class Projects extends Component {
       "Guess The Country game",
       "Podlover",
       "Chef It Up",
-      "Biba Fund"
+      "Biba Fund",
     ];
     const projectDate = ["2022"];
 
@@ -171,6 +171,7 @@ class Projects extends Component {
                           src={require("./../images/biba.gif")}
                           alt="projectImages"
                           height="190"
+                          width="150"
                           style={{
                             marginBottom: 0,
                             paddingBottom: 0,
